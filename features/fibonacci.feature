@@ -22,7 +22,7 @@ Feature: Fibonacci number sequences
     Given a fibonacci sequence initialized to 1
     When the sequence is skipped 1 times
     Then the state should be "The current number is 1"
-    And the next number should be 1
+    And the next number should be 2
 
   Scenario: When the sequence is initialized twice
     Given a fibonacci sequence initialized to 8
@@ -37,5 +37,5 @@ Feature: Fibonacci number sequences
     Then the next number should be 610
 
   Scenario: When the sequence is initialized with a float
-    Given a fibonacci sequence initialized to 3.0
+    Given a fibonacci sequence initialized to the float 3.0
     Then the next number should be 5
