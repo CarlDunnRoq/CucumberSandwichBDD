@@ -30,7 +30,16 @@ When("a fibonacci sequence is started", function() {
 });
 
 When("the sequence is skipped {int} time(s)", function(value) {
-    this.fibonacci.skip(value);
+    for(let i=0; i <value; i++)
+        this.fibonacci.skip(value);
+});
+
+When("a fibonacci sequence initialized to {int}", function(value){
+    try {
+        this.fibonacci.init(value);
+    }catch{
+        this.itThrown();
+    }
 });
 
 Then("the next number should be {int}", function(value) {

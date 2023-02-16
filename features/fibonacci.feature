@@ -15,7 +15,7 @@ Feature: Fibonacci number sequences
     And the next number should be 13
 
   Scenario: When initialized on a "non-fib" number
-    Given a fibonacci sequence initialized to 4
+    When a fibonacci sequence initialized to 4
     Then it should throw an exception
 
   Scenario: Sequence is initialized at 1, and skipped by 1
@@ -29,7 +29,7 @@ Feature: Fibonacci number sequences
     And a fibonacci sequence initialized to 5
     Then the next number should be 8
 
-  Scenario: When the sequence is skipped 3 times
+  Scenario: When the sequence is skipped 9 times
     Given a fibonacci sequence initialized to 5
     When the sequence is skipped 3 times
     And the sequence is skipped 3 times
